@@ -23,7 +23,7 @@
 
 local LuaREPL = {
 	is_tool = true,
-	extends = Node,
+	extends = "Node",
 }
 
 local index_G = { __index = _G }
