@@ -4,6 +4,10 @@ used for submitting it to the [Asset Library](https://godotengine.org/asset-libr
 
 `Lua PluginScript` asset link: https://godotengine.org/asset-library/asset/1078
 
+**WARNING**: the OSX library is not codesigned and will require explicit
+permission from users to run.
+Feel free to codesign it before distributing apps/games to end users.
+
 
 ## Updating the distribution
 
