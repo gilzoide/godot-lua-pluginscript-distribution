@@ -8,6 +8,9 @@ used for submitting it to the [Asset Library](https://godotengine.org/asset-libr
 permission from users to run.
 Feel free to codesign it before distributing apps/games to end users.
 
+**WARNING**: the iOS libraries are not codesigned and will require explicit
+signing or apps/games will crash instantly when loaded.
+
 
 ## Updating the distribution
 
@@ -16,5 +19,5 @@ Feel free to codesign it before distributing apps/games to end users.
 $ make unzip DIST_URL=<path-to-local-zip-file>
 # From a remote distribution zip file
 # E.g.: release 0.3.0 from GitHub
-$ make unzip DIST_URL=https://github.com/gilzoide/godot-lua-pluginscript/releases/download/0.3.0/lua_pluginscript.zip
+$ make unzip DIST_URL=https://github.com/gilzoide/godot-lua-pluginscript/releases/download/0.4.0/lua_pluginscript.zip
 ```
