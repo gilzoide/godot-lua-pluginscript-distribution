@@ -68,8 +68,8 @@ function LuaREPL:printn(msg)
 	self:print('\n')
 end
 
-function LuaREPL:printf(...)
-	self:print(string.format(...))
+function LuaREPL:printf(fmt, ...)
+	self:print(string.format(tostring(fmt), ...))
 end
 
 -- Runs a line, printing the results/error
@@ -115,9 +115,9 @@ end
 
 -- History handlers
 function LuaREPL:set_history(index)
-	if index >= 0 and index < #self.history then
+	if index >= 0 and index <= #self.history then
 		self.current_history = index
-		local text = self.history[self.current_history]
+		local text = self.history:safe_get(self.current_history) or ""
 		self.line_edit.text = text
 		self.line_edit.caret_position = #text
 	end
