@@ -13,11 +13,17 @@ signing or apps/games will crash instantly when loaded.
 
 
 ## Updating the distribution
-
+Either:
 ```sh
-# From a local distribution zip file
+# a) Download and unzip latest release using GitHub CLI
+$ make unzip-release
+
+# b) Download and unzip a tagged release using GitHub CLI
+$ make unzip-release TAG=0.5.2
+
+# c) Unzip a local distribution zip file
 $ make unzip DIST_URL=<path-to-local-zip-file>
-# From a remote distribution zip file
-# E.g.: release 0.3.0 from GitHub
-$ make unzip DIST_URL=https://github.com/gilzoide/godot-lua-pluginscript/releases/download/0.4.0/lua_pluginscript.zip
+# d) From a remote distribution zip file
+# E.g.: release 0.5.2 from GitHub
+$ make unzip DIST_URL=https://github.com/gilzoide/godot-lua-pluginscript/releases/download/0.5.2/lua_pluginscript.zip
 ```
